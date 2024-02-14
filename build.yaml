@@ -1,6 +1,9 @@
+board: [seeeduino_xiao_ble]
+shield: [chippy_left, chippy_right]
 include:
   - board: seeeduino_xiao_ble
     shield: chippy_left
+    artifact-name: chippy_left_artifact
   - board: seeeduino_xiao_ble
     shield: chippy_right
-# there is no settingsreset (needed) for the XIAO
+    artifact-name: chippy_right_artifact

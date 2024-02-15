@@ -28,8 +28,9 @@ config I2C
 config SSD1306
 	default y
 
-config SSD1306_REVERSE_MODE
-	default y
+# This was moved to the device tree https://docs.zephyrproject.org/latest/releases/migration-guide-3.5.html#device-drivers-and-device-tree
+# config SSD1306_REVERSE_MODE
+	# default y
 
 endif # ZMK_DISPLAY
 

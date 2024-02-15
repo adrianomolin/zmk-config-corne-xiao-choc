@@ -3,37 +3,34 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-        bindings = <
+        default_layer {
+            bindings = <
                 &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T        &kp Y    &kp U    &kp I    &kp O    &kp P    &kp BSPC
                 &kp LCTRL  &kp A    &kp S    &kp D    &kp F    &kp G        &kp H    &kp J    &kp K    &kp L    &kp SEMI &kp SQT
-                &mo 4      &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M    &kp COMMA &kp DOT &kp FSLH &ESC
-                                        &mt LALT   &mo 2    &kp RET        &kp SPACE &lt 1 ESC &mt RGUI
-        >;
-                };
-
-
-
-                lower_layer {
-                bindings = <
-                &kp TAB    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp BSPC
-                &none      &none    &kp BTN1 &kp MS_U &kp BTN2 &kp WH_U     &kp LEFT &kp DOWN &kp UP   &kp RGHT &none    &none
-                &kp LCTRL  &kp LSFT &kp MS_L &kp MS_D &kp MS_R &kp WH_D     &none    &none    &none    &none    &none    &none
-                                &kp LALT   &mo 3    &mt LSFT RET     &kp SPACE &trans &kp LGUI
-        >;
+                &mo 4      &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M    &kp COMMA &kp DOT &kp FSLH &kp ESC
+                                        &mt LALT   &mo 2    &kp RET        &kp SPACE &lt 1 ESC &mt RGUI      
+                >;
         };
 
-                raise_layer {
-        bindings = <
+        lower_layer {
+            bindings = <
+                &kp TAB    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp BSPC
+                &trans     &trans   &kp BTN1 &kp MS_U &kp BTN2 &kp WH_U     &kp LEFT &kp DOWN &kp UP   &kp RGHT &trans   &trans
+                &kp LCTRL  &kp LSFT &kp MS_L &kp MS_D &kp MS_R &kp WH_D     &trans   &trans   &trans   &trans   &trans   &trans
+                                        &kp LALT   &mo 3    &mt LSFT RET  &kp SPACE &trans   &kp LGUI
+            >;
+        };
+
+        raise_layer {
+            bindings = <
                 &kp C_GRV &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT     &kp CIRC &kp AMPS &kp LPRN &kp RPRN &kp GRV  &kp BSPC
                 &kp C_V   &kp QUOT &kp MIN  &kp PLUS &kp EQL  &kp HASH      &kp UNDS &kp COLN &kp LBKT &kp RBKT &kp QUES &kp DOT
-                &kp C_C   &kp CIRC &kp SLSH &kp ASTR &kp BSLS &kp PIPE      &kp TILD &kp DQT  &kp LBRC &kp RBRC &kp AT   &none
-                                       &kp LALT  &kp ESC  &mt LSFT RET      &kp SPACE &kp UNDS &kp LGUI
-        >;
+                &kp C_C   &kp CIRC &kp SLSH &kp ASTR &kp BSLS &kp PIPE      &kp TILD &kp DQT  &kp LBRC &kp RBRC &kp AT   &trans
+                                        &kp LALT  &kp ESC  &mt LSFT RET   &kp SPACE &kp UNDS &kp LGUI
+            >;
         };
-
-        };
+    };
 };

@@ -26,7 +26,7 @@
         raise_layer {
             bindings = <
                 &kp C_GRV  &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT     &kp CIRC &kp AMPS &kp LPRN &kp RPRN &kp GRV  &kp BSPC
-                &kp LCTRL  &kp QUOT &kp MIN  &kp PLUS &kp EQL  &kp HASH      &kp UNDS &kp COLN &kp LBKT &kp RBKT &kp QMARK &kp DOT
+                &kp LCTRL  &kp QUOT &kp MIN  &kp PLUS &kp EQL  &kp HASH      &kp UNDS &kp COLN &kp LBKT &kp RBKT &kp FSLH &kp DOT
                 &kp LSHFT  &kp CIRC &kp SLSH &kp ASTR &kp BSLS &kp PIPE      &kp TILD &kp DQT  &kp LBRC &kp RBRC &kp AT   &trans
                                              &kp LALT  &kp ESC  &kp RET      &kp SPACE &trans &kp LGUI
             >;

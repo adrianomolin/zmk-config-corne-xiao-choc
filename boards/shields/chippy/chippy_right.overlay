@@ -6,14 +6,10 @@
 
 #include "chippy.dtsi"
 
-// This offset is because it's the right side and there are 6 columns on the left before it
 &default_transform {
     col-offset = <6>;
 };
 
-&five_column_transform {
-	col-offset = <6>;
-};
 
 &kscan0 {
 	col-gpios

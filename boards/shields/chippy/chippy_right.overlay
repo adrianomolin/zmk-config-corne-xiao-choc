@@ -6,6 +6,7 @@
 
 #include "chippy.dtsi"
 
+// This offset is because it's the right side and there are 6 columns on the left before it
 &default_transform {
     col-offset = <6>;
 };

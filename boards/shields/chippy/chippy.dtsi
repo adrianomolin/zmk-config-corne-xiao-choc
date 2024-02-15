@@ -47,8 +47,6 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
 
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
-		label = "KSCAN";
-
 		diode-direction = "col2row";
 		row-gpios
 			= <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -58,36 +56,8 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
 			;
 		
 	};
-
-	// TODO: per-key RGB node(s)?
 };
 
-	
-//	&i2c0 {
-//	
-// 	status = "okay";
-//	
-//    compatible = "nordic,nrf-twi";
-//    sda-pin = <4>;
-//    scl-pin = <5>;
-//   
-//
-//	oled: ssd1306@3c {
-//		compatible = "solomon,ssd1306fb";
-//		reg = <0x3c>;
-//		label = "DISPLAY";
-//		width = <128>;
-//		height = <32>;
-//		segment-offset = <0>;
-//		page-offset = <0>;
-//		display-offset = <0>;
-//		multiplex-ratio = <31>;
-//		segment-remap;
-//		com-invdir;
-//		com-sequential;
-//		prechargep = <0x22>;
-//	};
-//};
 
 &pinctrl {
        i2c0_default: i2c0_default {
@@ -118,7 +88,6 @@ display_i2c: &i2c0 {
 	oled: ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
 		reg = <0x3c>;
-		label = "DISPLAY";
 		width = <128>;
 		height = <32>;
 		segment-offset = <0>;

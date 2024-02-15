@@ -14,8 +14,7 @@
                                             &kp LALT   &mo 2    &kp RET        &kp SPACE &lt 1 ESC &kp LGUI      
                 >;
         };
-
-        
+/*
         lower_layer {
             bindings = <
                 &kp TAB    &kp N1    &kp N2   &kp N3   &kp N4   &kp N5       &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp BSPC
@@ -24,8 +23,8 @@
                                            &kp LALT   &mo 3    &kp RET       &kp SPACE &trans   &kp LGUI
             >;
         };
+        */
         
-/*
         raise_layer {
             bindings = <
                 &kp C_GRV  &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT     &kp CIRC &kp AMPS &kp LPRN &kp RPRN &kp GRV  &kp BSPC
@@ -34,6 +33,6 @@
                                              &kp LALT  &kp ESC  &kp RET      &kp SPACE &trans &kp LGUI
             >;
         };
-        */
+
     };
 };

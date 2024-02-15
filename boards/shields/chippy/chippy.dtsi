@@ -78,7 +78,7 @@ display_i2c: &i2c0 {
 		com-invdir;
 		com-sequential;
 		prechargep = <0x22>;
-		inversion-on = <1>;
+		inversion-on;
 	};
 };
 

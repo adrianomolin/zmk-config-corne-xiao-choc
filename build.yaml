@@ -3,7 +3,7 @@ shield: [chippy_left, chippy_right]
 include:
   - board: seeeduino_xiao_ble
     shield: chippy_left
-    artifact-name: chippy_left_artifact
+    artifact-name: chippy_left
   - board: seeeduino_xiao_ble
     shield: chippy_right
-    artifact-name: chippy_right_artifact
+    artifact-name: chippy_right

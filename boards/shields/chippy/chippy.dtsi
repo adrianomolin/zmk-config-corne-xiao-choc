@@ -132,6 +132,10 @@ display_i2c: &i2c0 {
 	};
 };
 
+&uicr {
+    nfct-pins-as-gpios;
+};
+
 / {
   chosen {
     zephyr,display = &oled;

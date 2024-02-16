@@ -15,8 +15,8 @@
             tapping-term-ms = <400>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&sk>;
-        }
-    }
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";

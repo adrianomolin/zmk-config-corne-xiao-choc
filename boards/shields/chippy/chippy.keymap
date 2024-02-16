@@ -8,14 +8,24 @@
 
 / {
     behaviors {
+        // Use this so the shift doesn't capitalize more than 1 key
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+            ignore-modifiers;
+      };
+      // This will be used to make shift either on tap or hold
         lht: leftshift_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <400>;
-            quick-tap-ms = <0>;
-            bindings = <&kp>, <&sk>;
+            bindings = <&kp>, <&skq>;
         };
+
     };
 
     keymap {

@@ -9,8 +9,8 @@
 / {
     behaviors {
         lht: leftshift_hold_tap {
-            compatible = "zmk, behavior-hold-tap";
-            #binding-cells <2>;
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <400>;
             quick-tap-ms = <0>;

@@ -80,23 +80,21 @@
         
         raise_layer {
             bindings = <
-                &kp LC(GRAVE)  &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT     &kp CARET &kp AMPS &kp LPAR &kp RPAR &kp GRAVE  &kp BSPC
-                &kp LG(V)  &trans   &kp MINUS  &kp PLUS &kp EQUAL  &kp HASH  &kp UNDER &kp COLON &kp LBRC &kp RBRC &kp FSLH &kp DOT
-                &kp LG(C)  &kp LG(X)   &sk LS(LA)   &kp STAR &kp BSLH &kp PIPE      &kp TILDE &kp DQT  &kp LBKT &kp RBKT &kp AT   &trans
-                                             &kp LALT  &kp ESC  &kp RET      &kp SPACE &mo 1 &kp LGUI
+                &kp LC(GRAVE)  &kp EXCL    &kp AT       &kp HASH &kp DLLR   &kp PRCNT     &kp CARET &kp AMPS  &kp LPAR &kp RPAR &kp GRAVE  &kp BSPC
+                &kp LG(V)      &trans      &kp MINUS    &kp PLUS &kp EQUAL  &kp HASH      &kp UNDER &kp COLON &kp LBRC &kp RBRC &kp FSLH   &kp DOT
+                &kp LG(C)      &kp LG(X)   &sk LS(LA)   &kp STAR &kp BSLH   &kp PIPE      &kp TILDE &kp DQT   &kp LBKT &kp RBKT &kp AT     &trans
+                                                         &kp LALT  &kp ESC  &kp RET       &kp SPACE &mo 1 &kp LGUI
             >;
         };
 
          adjust_layer {
             bindings = <
-                &bootloader     &trans       &trans       &trans       &trans       &trans         &trans &trans &trans &trans &trans &bootloader
-                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans &trans &trans &trans &trans
-                &trans     &trans       &trans       &trans       &trans       &trans         &trans &trans &trans &trans &trans &trans
-                                        &trans       &trans       &trans         &trans &trans &trans
+                &bootloader  &trans       &trans       &trans       &trans       &trans         &trans &trans &trans &trans     &trans     &bootloader
+                &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &kp C_VOL_DN  &kp C_MUTE &C_VOL_UP  &trans &trans
+                &trans       &trans       &trans       &trans       &trans       &trans         &trans &kp C_PREV    &kp C_PP   &kp C_NEXT &trans &trans
+                                                       &trans       &trans       &trans         &trans &trans &trans
             >;
         };
 
     };
 };
-
-// fix grave to be cntrl and grave to open the terminal in vscode

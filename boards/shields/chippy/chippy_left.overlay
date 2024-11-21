@@ -1,44 +1,12 @@
 #include "chippy.dtsi"
 
-// Label of the kscan node in the dtsi
 &kscan0 {
-    col-gpios
-        = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        ;
-};
-
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 8)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
-                <NRF_PSEL(SPIM_MISO, 0, 25)>;
-        };
-    };
-    spi0_sleep: spi0_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 8)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
-                <NRF_PSEL(SPIM_MISO, 0, 25)>;
-            low-power-enable;
-        };
-    };
-};
-
-// from https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/nice_view_adapter/boards/nice_nano_v2.overlay
-nice_view_spi: &spi0 {
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
-};
-
-&pro_micro_i2c {
-    status = "disabled";
+	col-gpios
+		= <&gpio0 10 GPIO_ACTIVE_HIGH>   //Col0
+		, <&gpio1 15 GPIO_ACTIVE_HIGH>   //Col1
+		, <&gpio1 14 GPIO_ACTIVE_HIGH>   //Col2
+		, <&gpio1 13 GPIO_ACTIVE_HIGH>   //Col3
+		, <&gpio1 12 GPIO_ACTIVE_HIGH>   //Col4
+		, <&gpio1 11 GPIO_ACTIVE_HIGH>   //Col5
+		;
 };

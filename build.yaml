@@ -2,8 +2,8 @@ board: [seeeduino_xiao_ble]
 shield: [chippy_left, chippy_right]
 include:
   - board: seeeduino_xiao_ble
-    shield: chippy_left nice_view_adapter nice_view_gem
+    shield: chippy_left nice_view_gem
     artifact-name: chippy_left
   - board: seeeduino_xiao_ble
-    shield: chippy_right nice_view_adapter nice_view_gem
+    shield: chippy_right nice_view_gem
     artifact-name: chippy_right
